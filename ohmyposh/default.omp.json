@@ -1,0 +1,107 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "lightBlue",
+          "style": "plain",
+          "template": "{{ .Icon }} ",
+          "type": "os"
+        },
+        {
+          "foreground": "red",
+          "style": "plain",
+          "template": " % ",
+          "type": "root"
+        },
+        {
+          "style": "plain",
+          "template": "<cyan>{{ .UserName }}</><darkGray>@</><green>{{ .HostName }}</> ",
+          "type": "session"
+        },
+        {
+          "background": "#2B2B2B",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0c5",
+          "properties": {
+            "time_format": "2006/01/02"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} <#ffffff>\ueab0</> ",
+          "trailing_diamond": "\ue0c4 ",
+          "type": "time"
+        },
+        {
+          "background": "#2B2B2B",
+          "foreground": "#ffffff",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0c5",
+          "properties": {
+            "time_format": "3:04:05 PM"
+          },
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} <#ffffff>\ue641</> ",
+          "trailing_diamond": "\ue0c4 ",
+          "type": "time"
+        },
+        {
+          "foreground": "red",
+          "style": "plain",
+          "template": "C:{{ if gt .Code 0 }}{{ .Code }}{{ end }}",
+          "type": "status"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "template": "<darkGray>on</> <cyan>\uf113{{ .HEAD }}</>{{ if .Working.Changed }}<red> x</>{{ end }}",
+          "type": "git",
+          "properties": {
+            "fetch_status": true
+          }
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "lightYellow",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<darkGray>in </>\ue5fe{{ .Path }}",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "lightRed",
+          "style": "plain",
+          "template": "\u276f",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
