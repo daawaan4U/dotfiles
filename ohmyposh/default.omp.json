@@ -23,7 +23,8 @@
           "type": "session"
         },
         {
-          "background": "green",
+          "background": "#C3E88D",
+          "foreground": "#516139",
           "background_templates": ["{{ if gt .Code 0 }}#D81E5B{{ end }}"],
           "style": "diamond",
           "properties": {
@@ -35,8 +36,8 @@
           "type": "status"
         },
         {
-          "background": "#FF66AD",
-          "foreground": "#ffffff",
+          "background": "#F479B2",
+          "foreground": "#52283B",
           "style": "diamond",
           "properties": {
             "always_enabled": true,
@@ -49,9 +50,10 @@
         },
         {
           "background": "#2B2B2B",
+          "foreground": "#9C9C9C",
           "invert_powerline": true,
           "properties": {
-            "time_format": "2006/01/02 \ueab0 <darkGray>│</> 3:04:05 PM \ue641"
+            "time_format": "2006/01/02 \ueab0 │ 3:04:05 PM \ue641"
           },
           "style": "diamond",
           "template": " {{ .CurrentDate | date .Format }} ",
