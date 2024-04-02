@@ -25,6 +25,7 @@
         {
           "background": "#C3E88D",
           "foreground": "#516139",
+          "foreground_templates": ["{{ if gt .Code 0 }}white{{ end }}"],
           "background_templates": ["{{ if gt .Code 0 }}#D81E5B{{ end }}"],
           "style": "diamond",
           "properties": {
